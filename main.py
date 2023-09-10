@@ -1,10 +1,12 @@
+from typing import Dict
+import cv2
 There are several improvements that can be made to this Python program. Here are some suggestions:
 
 1. Use meaningful method and variable names: Improve the clarity of the code by using more descriptive names for methods and variables. For example, instead of using `start_program()`, `perform_exercise()`, and `generate_training_program()`, consider using names like `start_program_execution()`, `execute_exercise()`, and `generate_personalized_training_program()`, respectively.
 
 2. Use type hints: Add type hints to improve the readability and maintainability of the code. For example, you can specify the types of function arguments and return values. This provides clarity on the expected types and helps catch potential type errors during development.
 
-3. Remove unnecessary or placeholder methods: Remove methods that are empty or only contain a `pass` statement. This helps declutter the code and improves readability. If these methods are required in the future, they can be added back with the necessary implementation.
+3. Remove unnecessary or placeholder methods: Remove methods that are empty or only contain a `pass ` statement. This helps declutter the code and improves readability. If these methods are required in the future, they can be added back with the necessary implementation.
 
 4. Use docstrings: Add docstrings to describe the purpose and usage of each method. This helps other developers understand the code and promotes good documentation practices.
 
@@ -15,8 +17,7 @@ There are several improvements that can be made to this Python program. Here are
 Here is an improved version of the code with some of these suggestions implemented:
 
 ```python
-import cv2
-from typing import Dict
+
 
 class UserProfile:
     def __init__(self):
@@ -25,10 +26,12 @@ class UserProfile:
         self.current_fitness_level = ""
         self.requirements = ""
 
+
 class Exercise:
     def __init__(self, instructions: str, video: str):
         self.instructions = instructions
         self.video = video
+
 
 class VirtualPersonalTrainer:
     def __init__(self):
@@ -41,8 +44,10 @@ class VirtualPersonalTrainer:
     def create_user_profile(self):
         self.user_profile.name = input("Enter your name: ")
         self.user_profile.fitness_goals = input("Enter your fitness goals: ")
-        self.user_profile.current_fitness_level = input("Enter your current fitness level: ")
-        self.user_profile.requirements = input("Enter any specific requirements or limitations: ")
+        self.user_profile.current_fitness_level = input(
+            "Enter your current fitness level: ")
+        self.user_profile.requirements = input(
+            "Enter any specific requirements or limitations: ")
 
     def add_exercise_to_library(self, exercise_name: str, instructions: str, video: str):
         exercise = Exercise(instructions, video)
